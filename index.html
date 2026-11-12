@@ -734,11 +734,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2>Qual horário funcionaria pra você estar ao vivo?</h2>
     <p class="question-hint">Pode marcar mais de um.</p>
     <div class="options">
-      <div class="option" onclick="toggleOption(this,'mentoria_horario','manha')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">De manhã, antes das 9h</div></div></div>
+      <div class="option" onclick="toggleOption(this,'mentoria_horario','manha 9h as 11h')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">De manhã, entre 9h e 11h</div></div></div>
       <div class="option" onclick="toggleOption(this,'mentoria_horario','almoco')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Na hora do almoço, entre 12h e 14h</div></div></div>
       <div class="option" onclick="toggleOption(this,'mentoria_horario','fim da tarde')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">No fim da tarde, entre 18h e 20h</div></div></div>
-      <div class="option" onclick="toggleOption(this,'mentoria_horario','noite')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">À noite, depois das 20h</div></div></div>
-      <div class="option" onclick="toggleOption(this,'mentoria_horario','fim de semana')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">No fim de semana</div></div></div>
     </div>
     <p class="error-msg" id="err-mentoria-horario">Selecione ao menos uma opção para continuar.</p>
     <div class="btn-row"><button class="btn btn-back" onclick="back()">Voltar</button><button class="btn btn-primary" onclick="next()">Continuar</button></div>
@@ -789,6 +787,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <option value="duas ou mais">Refiz duas vezes ou mais</option>
       </select>
     </div>
+    <div class="field"><label>Quanto o seu patrimônio evoluiu desde que você começou a aplicar o Método Travessia? (opcional)</label><textarea data-campo="patrimonio_evolucao" placeholder="Pode ser em reais, em porcentagem ou do seu jeito"></textarea></div>
     <p class="error-msg" id="err-mensuracao">Responda as duas perguntas para continuar.</p>
     <div class="btn-row"><button class="btn btn-back" onclick="back()">Voltar</button><button class="btn btn-primary" onclick="next()">Continuar</button></div>
   </div>
@@ -878,7 +877,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     { id:'mentoria-horario',      label:'Mentorias ao vivo', req:['mentoria_horario'], campos:['mentoria_horario'], cond:() => NAO_FOI() && (respostas.mentoria_impedimento || []).indexOf('horario nao funciona') >= 0 },
     { id:'temas',                 label:'Mentorias ao vivo' },
     { id:'sobra-comparada',       label:'Resultados',        req:['sobra_comparada'], campos:['sobra_comparada','o_que_mudou'], cond:TEM_UM_MES },
-    { id:'mensuracao',            label:'Resultados',        req:['mensuracao_resultado','mensuracao'], campos:['mensuracao_resultado','mensuracao'], cond:TEM_3_MESES },
+    { id:'mensuracao',            label:'Resultados',        req:['mensuracao_resultado','mensuracao'], campos:['mensuracao_resultado','mensuracao','patrimonio_evolucao'], cond:TEM_3_MESES },
     { id:'mudaria',               label:'O que ainda falta', req:['mudaria'] },
     { id:'nps',                   label:'Fechamento',        req:['nps'] },
     { id:'fechamento',            label:'Fechamento',        req:['quer_ajuda'] }
