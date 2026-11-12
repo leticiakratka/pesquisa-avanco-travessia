@@ -639,50 +639,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="btn-row"><button class="btn btn-back" onclick="back()">Voltar</button><button class="btn btn-primary" onclick="next()">Continuar</button></div>
   </div>
 
-  <!-- 4. RITMO -->
-  <div class="step" id="step-ritmo">
-    <div class="step-label">Onde você está</div>
-    <h2>Numa semana normal, quanto tempo sobra pra você se dedicar ao método?</h2>
-    <p class="question-hint">Não existe resposta certa. É pra eu entender o ritmo real de quem está do outro lado.</p>
-    <div class="options">
-      <div class="option" onclick="selectOption(this,'ritmo_semana','quase nenhum')"><div class="option-radio"></div><div class="option-text"><div class="option-title">Quase nenhum, a rotina está corrida</div></div></div>
-      <div class="option" onclick="selectOption(this,'ritmo_semana','ate 1 hora')"><div class="option-radio"></div><div class="option-text"><div class="option-title">Até 1 hora</div></div></div>
-      <div class="option" onclick="selectOption(this,'ritmo_semana','1 a 3 horas')"><div class="option-radio"></div><div class="option-text"><div class="option-title">De 1 a 3 horas</div></div></div>
-      <div class="option" onclick="selectOption(this,'ritmo_semana','mais de 3 horas')"><div class="option-radio"></div><div class="option-text"><div class="option-title">Mais de 3 horas</div></div></div>
-    </div>
-    <p class="error-msg" id="err-ritmo">Selecione uma opção para continuar.</p>
-    <div class="btn-row"><button class="btn btn-back" onclick="back()">Voltar</button><button class="btn btn-primary" onclick="next()">Continuar</button></div>
-  </div>
-
-  <!-- 5. REGISTRO -->
-  <div class="step" id="step-registro">
-    <div class="step-label">Onde você está</div>
-    <h2>Nos últimos 30 dias, você registrou os seus gastos?</h2>
-    <div class="options">
-      <div class="option" onclick="selectOption(this,'registro_gastos','mes inteiro')"><div class="option-radio"></div><div class="option-text"><div class="option-title">Registrei o mês inteiro</div></div></div>
-      <div class="option" onclick="selectOption(this,'registro_gastos','algumas semanas')"><div class="option-radio"></div><div class="option-text"><div class="option-title">Registrei algumas semanas</div></div></div>
-      <div class="option" onclick="selectOption(this,'registro_gastos','comecei e parei')"><div class="option-radio"></div><div class="option-text"><div class="option-title">Comecei e parei</div></div></div>
-      <div class="option" onclick="selectOption(this,'registro_gastos','nao registrei')"><div class="option-radio"></div><div class="option-text"><div class="option-title">Não registrei</div></div></div>
-    </div>
-    <p class="error-msg" id="err-registro">Selecione uma opção para continuar.</p>
-    <div class="btn-row"><button class="btn btn-back" onclick="back()">Voltar</button><button class="btn btn-primary" onclick="next()">Continuar</button></div>
-  </div>
-
-  <!-- 6. SOBRA -->
-  <div class="step" id="step-sobra">
-    <div class="step-label">Onde você está</div>
-    <h2>No último mês, sobrou dinheiro?</h2>
-    <div class="options">
-      <div class="option" onclick="selectOption(this,'sobra_mes','nao sobrou nada')"><div class="option-radio"></div><div class="option-text"><div class="option-title">Não sobrou nada</div></div></div>
-      <div class="option" onclick="selectOption(this,'sobra_mes','sobrou mas acabei usando')"><div class="option-radio"></div><div class="option-text"><div class="option-title">Sobrou, mas acabei usando</div></div></div>
-      <div class="option" onclick="selectOption(this,'sobra_mes','sobrou e ficou parado na conta')"><div class="option-radio"></div><div class="option-text"><div class="option-title">Sobrou e ficou parado na conta</div></div></div>
-      <div class="option" onclick="selectOption(this,'sobra_mes','sobrou e foi pra meta ou investimento')"><div class="option-radio"></div><div class="option-text"><div class="option-title">Sobrou e foi pra uma meta ou pro investimento</div></div></div>
-      <div class="option" onclick="selectOption(this,'sobra_mes','nao sei dizer')"><div class="option-radio"></div><div class="option-text"><div class="option-title">Não sei dizer</div></div></div>
-    </div>
-    <p class="error-msg" id="err-sobra">Selecione uma opção para continuar.</p>
-    <div class="btn-row"><button class="btn btn-back" onclick="back()">Voltar</button><button class="btn btn-primary" onclick="next()">Continuar</button></div>
-  </div>
-
   <!-- 7. PARCELAS -->
   <div class="step" id="step-parcelas">
     <div class="step-label">Onde você está</div>
@@ -717,21 +673,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2>Onde foi?</h2>
     <p class="question-hint">Pode marcar mais de um.</p>
     <div class="options">
-      <div class="option" onclick="toggleOption(this,'travou_onde','Comece Aqui')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">No Comece Aqui</div></div></div>
-      <div class="option" onclick="toggleOption(this,'travou_onde','Raio-X Inicial')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">No Raio-X Inicial</div></div></div>
+      <div class="option" onclick="toggleOption(this,'travou_onde','Comece Aqui ou Raio-X Inicial')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">No Comece Aqui ou no Raio-X Inicial</div></div></div>
       <div class="option" onclick="toggleOption(this,'travou_onde','orcamento ideal x 50/30/20')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">No orçamento ideal</div><div class="option-desc">Não entendi como ele conversa com o 50/30/20 que já fiz no Raio-X</div></div></div>
-      <div class="option" onclick="toggleOption(this,'travou_onde','Otimizacao de Gastos e Orcamento')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Em outra parte da Otimização de Gastos e Orçamento</div></div></div>
       <div class="option" onclick="toggleOption(this,'travou_onde','controle das parcelas')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">No controle das parcelas</div><div class="option-desc">Saber quantas faltam e quando cada uma acaba</div></div></div>
-      <div class="option" onclick="toggleOption(this,'travou_onde','bater o controle com o extrato')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Em bater a planilha com o extrato e o saldo futuro do banco</div></div></div>
-      <div class="option" onclick="toggleOption(this,'travou_onde','registro dos gastos do dia a dia')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">No registro dos gastos do dia a dia</div></div></div>
-      <div class="option" onclick="toggleOption(this,'travou_onde','categorizacao dos gastos')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Na categorização dos gastos</div></div></div>
-      <div class="option" onclick="toggleOption(this,'travou_onde','lancamento das faturas do cartao')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">No lançamento das faturas do cartão</div></div></div>
+      <div class="option" onclick="toggleOption(this,'travou_onde','controle do dia a dia')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">No controle do dia a dia</div><div class="option-desc">Registrar, categorizar, lançar a fatura do cartão ou bater com o extrato do banco</div></div></div>
       <div class="option" onclick="toggleOption(this,'travou_onde','manter o controle atualizado')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Em manter o controle atualizado depois do primeiro mês</div></div></div>
-      <div class="option" onclick="toggleOption(this,'travou_onde','Plano de Quitacao de Dividas')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">No Plano de Quitação de Dívidas</div></div></div>
-      <div class="option" onclick="toggleOption(this,'travou_onde','Estrutura Financeira PJ')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Na Estrutura Financeira para Autônomos e PJ</div></div></div>
-      <div class="option" onclick="toggleOption(this,'travou_onde','Planejamento de Metas')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">No Planejamento de Metas</div></div></div>
-      <div class="option" onclick="toggleOption(this,'travou_onde','Fundamentos de Investimentos')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Em Fundamentos de Investimentos</div></div></div>
-      <div class="option" onclick="toggleOption(this,'travou_onde','Construcao da Carteira')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Na Construção da Carteira ou na hora de escolher onde investir</div></div></div>
+      <div class="option" onclick="toggleOption(this,'travou_onde','Dividas, PJ ou Metas')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Nos módulos de dívidas, autônomos e PJ ou metas</div></div></div>
+      <div class="option" onclick="toggleOption(this,'travou_onde','Investimentos')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Nos investimentos: fundamentos ou montar a carteira</div></div></div>
       <div class="option" onclick="toggleOption(this,'travou_onde','organizar o tempo pra fazer')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Em encaixar o método na minha rotina</div></div></div>
     </div>
     <p class="error-msg" id="err-travou-onde">Selecione ao menos uma opção para continuar.</p>
@@ -746,22 +694,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="field"><textarea data-campo="travou_motivo" placeholder="Pode escrever solto, do jeito que vier"></textarea></div>
     <div class="field"><label>Lembra o nome da aula ou da planilha? (opcional)</label><input type="text" data-campo="travou_aula" placeholder="Ex: aula do orçamento ideal, aba Fluxo de Caixa"></div>
     <p class="error-msg" id="err-travou-por">Escreva sua resposta para continuar.</p>
-    <div class="btn-row"><button class="btn btn-back" onclick="back()">Voltar</button><button class="btn btn-primary" onclick="next()">Continuar</button></div>
-  </div>
-
-  <!-- 11. TENTOU DESTRAVAR -->
-  <div class="step" id="step-travou-tentou">
-    <div class="step-label">Onde você travou</div>
-    <h2>O que você fez pra tentar destravar?</h2>
-    <p class="question-hint">Pode marcar mais de um.</p>
-    <div class="options">
-      <div class="option" onclick="toggleOption(this,'travou_tentou','assisti a aula de novo')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Assisti a aula de novo</div></div></div>
-      <div class="option" onclick="toggleOption(this,'travou_tentou','perguntei na comunidade')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Perguntei na comunidade</div></div></div>
-      <div class="option" onclick="toggleOption(this,'travou_tentou','levei pra mentoria ao vivo')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Levei a dúvida pra mentoria ao vivo</div></div></div>
-      <div class="option" onclick="toggleOption(this,'travou_tentou','procurei fora do curso')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Procurei fora do curso</div></div></div>
-      <div class="option" onclick="toggleOption(this,'travou_tentou','deixei parado')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Ainda não fiz nada, deixei parado</div></div></div>
-    </div>
-    <p class="error-msg" id="err-travou-tentou">Selecione ao menos uma opção para continuar.</p>
     <div class="btn-row"><button class="btn btn-back" onclick="back()">Voltar</button><button class="btn btn-primary" onclick="next()">Continuar</button></div>
   </div>
 
@@ -815,21 +747,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- 15. TEMAS -->
   <div class="step" id="step-temas">
     <div class="step-label">Mentorias ao vivo</div>
-    <h2>Quais temas você mais queria ver numa próxima mentoria?</h2>
-    <p class="question-hint">Marque até três, os que fariam mais diferença pra você agora.</p>
-    <div class="options">
-      <div class="option" onclick="toggleOption(this,'temas_mentoria','sair do cartao e das parcelas')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Sair do cartão e das parcelas</div></div></div>
-      <div class="option" onclick="toggleOption(this,'temas_mentoria','orcamento com renda variavel')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Orçamento quando a renda varia todo mês</div></div></div>
-      <div class="option" onclick="toggleOption(this,'temas_mentoria','reserva de emergencia')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Montar a reserva de emergência</div></div></div>
-      <div class="option" onclick="toggleOption(this,'temas_mentoria','primeiros investimentos')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Primeiros investimentos: onde colocar o dinheiro</div></div></div>
-      <div class="option" onclick="toggleOption(this,'temas_mentoria','aposentadoria e previdencia')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Aposentadoria e previdência (PGBL e VGBL)</div></div></div>
-      <div class="option" onclick="toggleOption(this,'temas_mentoria','comprar imovel')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Comprar imóvel: quando e como</div></div></div>
-      <div class="option" onclick="toggleOption(this,'temas_mentoria','dinheiro em casal')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Organizar o dinheiro em casal</div></div></div>
-      <div class="option" onclick="toggleOption(this,'temas_mentoria','emocional e compras por impulso')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Emocional e compras por impulso</div></div></div>
-      <div class="option" onclick="toggleOption(this,'temas_mentoria','imposto de renda')"><div class="option-radio square"></div><div class="option-text"><div class="option-title">Imposto de renda</div></div></div>
-    </div>
-    <div class="field" style="margin-top:14px"><label>Outro tema? (opcional)</label><input type="text" data-campo="temas_outro" placeholder="O que você queria que eu explicasse ao vivo"></div>
-    <p class="error-msg" id="err-temas">Marque um tema ou escreva o seu para continuar.</p>
+    <h2>Que tema você mais queria ver numa próxima mentoria?</h2>
+    <p class="question-hint">O assunto que faria mais diferença pra você agora. Se não tiver nenhum em mente, pode pular.</p>
+    <div class="field"><textarea data-campo="temas_mentoria" placeholder="O que você queria que eu explicasse ao vivo"></textarea></div>
     <div class="btn-row"><button class="btn btn-back" onclick="back()">Voltar</button><button class="btn btn-primary" onclick="next()">Continuar</button></div>
   </div>
 
@@ -844,6 +764,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="option" onclick="selectOption(this,'sobra_comparada','esta sobrando menos')"><div class="option-radio"></div><div class="option-text"><div class="option-title">Está sobrando menos</div></div></div>
       <div class="option" onclick="selectOption(this,'sobra_comparada','nao sei dizer')"><div class="option-radio"></div><div class="option-text"><div class="option-title">Não sei dizer</div></div></div>
     </div>
+    <div class="field" style="margin-top:18px"><label>O que mudou de concreto na sua vida financeira desde que você entrou? (opcional)</label><textarea data-campo="o_que_mudou" placeholder="Um número, um hábito novo, uma conta que você quitou"></textarea></div>
     <p class="error-msg" id="err-sobra-comparada">Selecione uma opção para continuar.</p>
     <div class="btn-row"><button class="btn btn-back" onclick="back()">Voltar</button><button class="btn btn-primary" onclick="next()">Continuar</button></div>
   </div>
@@ -872,16 +793,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="btn-row"><button class="btn btn-back" onclick="back()">Voltar</button><button class="btn btn-primary" onclick="next()">Continuar</button></div>
   </div>
 
-  <!-- 18. O QUE MUDOU -->
-  <div class="step" id="step-mudou">
-    <div class="step-label">Resultados</div>
-    <h2>O que mudou de concreto na sua vida financeira desde que você entrou?</h2>
-    <p class="question-hint">Pode ser um número, um hábito novo, uma decisão que você tomou, uma conta que você quitou. Se ainda não mudou nada, pode escrever isso também.</p>
-    <div class="field"><textarea data-campo="o_que_mudou" placeholder="Escreve do seu jeito"></textarea></div>
-    <p class="error-msg" id="err-mudou">Escreva sua resposta para continuar.</p>
-    <div class="btn-row"><button class="btn btn-back" onclick="back()">Voltar</button><button class="btn btn-primary" onclick="next()">Continuar</button></div>
-  </div>
-
   <!-- 19. MUDARIA -->
   <div class="step" id="step-mudaria">
     <div class="step-label">O que ainda falta</div>
@@ -898,7 +809,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="step-label">Fechamento</div>
     <h2>De 0 a 10, quanto você indicaria o Método Travessia pra alguém como você?</h2>
     <div class="scale-block"><div class="scale-row" data-scale="nps"></div></div>
-    <div class="field" style="margin-top:18px"><label>Por que essa nota?</label><textarea data-campo="nps_porque" placeholder="O que pesou pra você dar essa nota"></textarea></div>
+    <div class="field" style="margin-top:18px"><label>Por que essa nota? (opcional)</label><textarea data-campo="nps_porque" placeholder="O que pesou pra você dar essa nota"></textarea></div>
     <p class="error-msg" id="err-nps">Dê a nota e explique o porquê para continuar.</p>
     <div class="btn-row"><button class="btn btn-back" onclick="back()">Voltar</button><button class="btn btn-primary" onclick="next()">Continuar</button></div>
   </div>
@@ -958,23 +869,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     { id:'ident',                 label:'Identificação',     req:['nome','email','whatsapp','tempo_acesso'] },
     { id:'etapa',                 label:'Onde você está',    req:['etapa_atual'] },
     { id:'entregaveis',           label:'Onde você está',    req:['entregaveis'] },
-    { id:'ritmo',                 label:'Onde você está',    req:['ritmo_semana'] },
-    { id:'registro',              label:'Onde você está',    req:['registro_gastos'] },
-    { id:'sobra',                 label:'Onde você está',    req:['sobra_mes'] },
     { id:'parcelas',              label:'Onde você está',    req:['parcelas'] },
     { id:'travou',                label:'Onde você travou',  req:['travou'] },
     { id:'travou-onde',           label:'Onde você travou',  req:['travou_onde'],   campos:['travou_onde'], cond:TRAVOU },
     { id:'travou-por',            label:'Onde você travou',  req:['travou_motivo'], campos:['travou_motivo','travou_aula'], cond:TRAVOU },
-    { id:'travou-tentou',         label:'Onde você travou',  req:['travou_tentou'], campos:['travou_tentou'], cond:TRAVOU },
     { id:'mentoria',              label:'Mentorias ao vivo', req:['mentoria'] },
     { id:'mentoria-impedimento',  label:'Mentorias ao vivo', ou:['mentoria_impedimento','mentoria_impedimento_outro'], campos:['mentoria_impedimento','mentoria_impedimento_outro'], cond:NAO_FOI },
     { id:'mentoria-horario',      label:'Mentorias ao vivo', req:['mentoria_horario'], campos:['mentoria_horario'], cond:() => NAO_FOI() && (respostas.mentoria_impedimento || []).indexOf('horario nao funciona') >= 0 },
-    { id:'temas',                 label:'Mentorias ao vivo', ou:['temas_mentoria','temas_outro'] },
-    { id:'sobra-comparada',       label:'Resultados',        req:['sobra_comparada'], campos:['sobra_comparada'], cond:TEM_UM_MES },
+    { id:'temas',                 label:'Mentorias ao vivo' },
+    { id:'sobra-comparada',       label:'Resultados',        req:['sobra_comparada'], campos:['sobra_comparada','o_que_mudou'], cond:TEM_UM_MES },
     { id:'mensuracao',            label:'Resultados',        req:['mensuracao_resultado','mensuracao'], campos:['mensuracao_resultado','mensuracao'], cond:TEM_3_MESES },
-    { id:'mudou',                 label:'Resultados',        req:['o_que_mudou'] },
     { id:'mudaria',               label:'O que ainda falta', req:['mudaria'] },
-    { id:'nps',                   label:'Fechamento',        req:['nps','nps_porque'] },
+    { id:'nps',                   label:'Fechamento',        req:['nps'] },
     { id:'fechamento',            label:'Fechamento',        req:['quer_ajuda'] }
   ];
   let atual = 0;
@@ -1003,8 +909,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
   // "Nenhum ainda" e "deixei parado" não combinam com as outras marcações:
   // marcar um deles desmarca o resto, e vice-versa.
-  const EXCLUSIVAS = { entregaveis: 'nenhum ainda', travou_tentou: 'deixei parado' };
-  const LIMITE = { temas_mentoria: 3 };
+  const EXCLUSIVAS = { entregaveis: 'nenhum ainda' };
+  const LIMITE = {};
   function toggleOption(el, campo, valor) {
     if (!Array.isArray(respostas[campo])) respostas[campo] = [];
     const lista = respostas[campo];
