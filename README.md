@@ -12,7 +12,7 @@ onde emperrou, o que ainda falta e o resultado percebido até aqui.
   https://github.com/leticiakratka/obrigado-diagnostico-travessia (`Code.gs`),
   e o script publicado está vinculado à planilha.
 - Quem responde "sim, pode me chamar" vira tarefa no ClickUp, na lista Letícia
-  (espaço Gestão), com vencimento no mesmo dia.
+  (espaço Gestão), atribuída à Letícia e à Soraya, com vencimento no mesmo dia.
 - Presente de fim de formulário: https://simulador-objetivos.leticiakratka.com.br/
 - GTM server-side: container GTM-N9GCCZSW via api.leticiakratka.com.br
 
